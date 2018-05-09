@@ -15,15 +15,18 @@
 		<h1 class="main-headline">Games of thrones</h1>
 		<ul class="character-list-container"></ul>
 
-		<script id="character-list-container" type="text/x-handlebars-template">
+		<script id="character-template" type="text/x-handlebars-template">
 
+			{{#each characters}}
 			<li class="character">
-				<img src="images/{{shortCode}}.jpg" alt="jon-snow">
+				<img src="images/{{shortCode}}.jpg" alt="{{shortCode}}">
 				<h2>{{name}}</h2>
 				<p>Actor: {{actor}}</p>
 				<p>House: {{house}}</p>
-				<p>Whereabouts: {{location}}</p>
+				{{#if location}}<p>Whereabouts:{{location}}</p>{{/if}}
+				{{#unless location}}<p>Whereabouts are unknown...</p>{{/unless}}
 			</li>
+			{{/each}}
 
 		</script>
 

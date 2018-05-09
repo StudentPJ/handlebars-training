@@ -11,28 +11,50 @@ const cast = {
 			"name": "Tyrion Lannister",
 			"shortCode": "tyrion",
 			"actor": "Peter Dinklage",
-			"house": "Lannister"
+			"house": "Lannister",
+			"location": undefined
 		},
 		{
 			"name": "Brienne of Tarth",
 			"shortCode": "brienne",
 			"actor": "Gwendoline Christie",
 			"house": "Clegane",
-			"location": "unknown"
+			"location": null
 		},
 		{
 			"name": "Eddard Stark",
 			"shortCode": "ned-stark",
 			"actor": "Sean Bean",
-			"house": "Stark",
-			"location": "Winterfell"
+			"house": "Stark"
 		},
 		{
 			"name": "Sandor Clegane",
 			"shortCode": "the-hound",
 			"actor": "Rory McCann",
 			"house": "Clegane",
-			"location": "unknown"
+			"location": false
+		},
+		{
+			"name": "Daenerys Targerim",
+			"shortCode": "daenerys",
+			"actor": "Emilia Clarke",
+			"house": "Targerim",
+			"location": "Mereen"
+		},
+		{
+			"name": "King Joffrey Baratheon",
+			"shortCode": "joffrey",
+			"actor": "Jack Gleeson",
+			"house": "Baratheon"
 		}
 	]
 };
+
+$(function () {
+
+	var characterTemplate = $('#character-template').html();
+
+	var compiledCharacterTemplate = Handlebars.compile(characterTemplate);
+
+	$('.character-list-container').html(compiledCharacterTemplate(cast));
+});

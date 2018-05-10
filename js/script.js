@@ -1,54 +1,32 @@
-const cast = {
-	'characters': [
-		{
-			"name": "Jon Snow",
-			"shortCode": "jon-snow",
-			"actor": "Kit Harrington",
-			"house": "Stark",
-			"location": "The Wall"
-		},
-		{
-			"name": "Tyrion Lannister",
-			"shortCode": "tyrion",
-			"actor": "Peter Dinklage",
-			"house": "Lannister",
-			"location": undefined
-		},
-		{
-			"name": "Brienne of Tarth",
-			"shortCode": "brienne",
-			"actor": "Gwendoline Christie",
-			"house": "Clegane",
-			"location": null
-		},
-		{
-			"name": "Eddard Stark",
-			"shortCode": "ned-stark",
-			"actor": "Sean Bean",
-			"house": "Stark"
-		},
-		{
-			"name": "Sandor Clegane",
-			"shortCode": "the-hound",
-			"actor": "Rory McCann",
-			"house": "Clegane",
-			"location": false
-		},
-		{
-			"name": "Daenerys Targerim",
-			"shortCode": "daenerys",
-			"actor": "Emilia Clarke",
-			"house": "Targerim",
-			"location": "Mereen"
-		},
-		{
-			"name": "King Joffrey Baratheon",
-			"shortCode": "joffrey",
-			"actor": "Jack Gleeson",
-			"house": "Baratheon"
-		}
-	]
-};
+// get query string parameter
+function getParameterByName(name, url) {
+	if (!url) url = window.location.href;
+	name = name.replace(/[\[\]]/g, "\\$&");
+	var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+		results = regex.exec(url);
+	if (!results) return null;
+	if (!results[2]) return '';
+	return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+Handlebars.registerHelper("formatName", function (property1, property2) {
+	return new Handlebars.SafeString("Hello <strong>" + property1 + "</strong> and I live at <strong>" + property2 + "</strong>");
+});
+
+Handlebars.registerHelper("formatPhoneNumber", function (property) {
+	if(property) {
+		var phone = property.toString();
+		return "(" + phone.substr(0, 3) + ")" + phone.substr(3, 3) + "-" + phone.substr(6, 4);
+	}
+});
+
+Handlebars.registerHelper("makeBold", function (options) {
+	return new Handlebars.SafeString("<strong>" + options.fn(this) + "</strong>");
+});
+
+Handlebars.registerHelper("toLower", function (options) {
+	return options.fn(this).toLowerCase();
+});
 
 $(function () {
 
@@ -56,5 +34,22 @@ $(function () {
 
 	var compiledCharacterTemplate = Handlebars.compile(characterTemplate);
 
-	$('.character-list-container').html(compiledCharacterTemplate(cast));
+	var characterId = getParameterByName("id");
+
+	var promise = fetch('./data/cast.json');
+
+	promise.then(function (value) {
+		return value.json();
+	}).then(function (cast) {
+		if($('body').hasClass('page-cast-details')) {
+			$('.character-list-container').html(compiledCharacterTemplate(cast.characters[characterId]));
+		} else {
+			$('.character-list-container').html(compiledCharacterTemplate(cast));
+		}
+	});
+
+	/*$('.character-list-container').on('click', '.button--details', function (e) {
+		e.preventDefault();
+		console.log('123');
+	});*/
 });

@@ -25,8 +25,14 @@ h1 {
 .character {
 	background-color: #ffffff;
 	margin-bottom: 10px;
-	overflow: hidden;
+	display: flex;
 	min-height: 120px;
+}
+
+.character-info {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
 }
 
 .character * {
@@ -34,8 +40,26 @@ h1 {
 }
 
 .character img {
-	float: left;
 	margin-right: 20px;
 	width: 175px;
 	height: auto;
+}
+
+.button {
+	border: 0 none;
+	background-color: #505961;
+	text-align: center;
+	padding: 5px 20px;
+	border-radius: 0;
+	color: #c9ffed;
+	font-size: 16px;
+	transition: .225s all ease-in-out;
+	text-decoration: none;
+	align-self: flex-end;
+	margin-left: auto;
+}
+
+.button:hover {
+	background-color: deeppink;
+	color: #ffffff;
 }

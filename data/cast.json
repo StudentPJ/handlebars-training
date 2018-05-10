@@ -1,7 +1,6 @@
 {
 	"characters": [
 		{
-			"id": 0,
 			"name": "Jon Snow",
 			"shortCode": "jon-snow",
 			"actor": "Kit Harrington",
@@ -15,7 +14,6 @@
 			"bio": "Jon Snow, born Aegon Targaryen, is the son of Lyanna Stark and Rhaegar Targaryen, the late Prince of Dragonstone. From infancy, Jon is presented as the bastard son of Lord Eddard Stark, Lyanna's brother, and raised by Eddard alongside his lawful children at Winterfell but his true parentage is kept secret from everyone, including Jon himself. In order to escape his bastard status, Jon joins the Night's Watch and is eventually chosen as Lord Commander. However, he is later murdered in a mutiny and resurrected by the Red Priestess Melisandre. Freed from his Night's Watch vows, Jon joins his cousin, Sansa Stark, in building an army and together they retake Winterfell from House Bolton, restoring House Stark's dominion over the North with Jon being declared the new King in the North. However, after successfully capturing a wight and presenting it to the Lannisters as proof that the Army of the Dead is real, Jon pledges himself and his army to Daenerys Targaryen, Rhaegar's sister, and steps down as King of the North."
 		},
 		{
-			"id": 1,
 			"name": "Tyrion Lannister",
 			"shortCode": "tyrion",
 			"actor": "Peter Dinklage",
@@ -28,7 +26,6 @@
 			"bio": "Lord Tyrion Lannister is the youngest child of Lord Tywin Lannister and younger brother of Cersei and Jaime Lannister. A dwarf, he uses his wit and intellect to overcome the prejudice he faces.His abduction by Catelyn Stark for a crime he did not commit serves as one of the catalysts of the War of the Five Kings. After escaping his captors, Tyrion is appointed by his father as acting Hand of the King to Joffrey Baratheon and successfully defends King's Landing against Stannis Baratheon at the Battle of the Blackwater, after which he is stripped of his power, demoted to Master of Coin and eventually framed for Joffrey's murder. After his champion, Oberyn Martell, dies in Tyrion's trial by combat, Tyrion flees to Essos with help from Jaime and Varys after murdering his father.In the east, he is captured by Jorah Mormont and taken to Daenerys Targaryen in Meereen, whom Varys had intended for Tyrion to meet anyway. Daenerys decides to enlist his help in reclaiming the Iron Throne. For his loyalty and service, Tyrion is named as Hand of the Queen to Daenerys before they set sail for Westeros with her new army and allies, ready to advise her when they reach her ancestral home of Dragonstone, where he acts as her strategist during her invasion of Westeros."
 		},
 		{
-			"id": 2,
 			"name": "Brienne of Tarth",
 			"shortCode": "brienne",
 			"actor": "Gwendoline Christie",
@@ -41,7 +38,6 @@
 			"bio": "Brienne is the sole surviving child and heir of Lord Selwyn Tarth of Evenfall Hall, on the island of Tarth, located in the Narrow Sea off the coast of the Stormlands. She is unusually tall and muscular for a woman by Westerosi standards and developed a taste for martial activity as a child. Brienne has grown up to become skilled at arms and dreams of becoming a knight.Brienne's mother died when she was so young that she doesn't remember her.[2] She had some siblings but they all died in childhood. As the sole heir of House Tarth, she posed a fairly promising marriage prospect for men from other noble Houses, but due to her physicality and personality has never seriously pursued a marriage alliance with another House. She is also called The Maid of Tarth, or, disparagingly, Brienne the Beauty, due to her appearance."
 		},
 		{
-			"id": 3,
 			"name": "Eddard Stark",
 			"shortCode": "ned-stark",
 			"actor": "Sean Bean",
@@ -54,7 +50,6 @@
 			"bio": "Lord Eddard Stark, also known as Ned Stark, was the head of House Stark, the Lord of Winterfell, Lord Paramount and Warden of the North, and later Hand of the King to King Robert I Baratheon. He was the older brother of Benjen, Lyanna and the younger brother of Brandon Stark. He is the father of Robb, Sansa, Arya, Bran and Rickon by his wife, Catelyn Tully, and uncle of Jon Snow, who he raised as his bastard son. He was a dedicated husband and father, a loyal friend and an honorable lord. Eddard's execution and revealing the illegitimacy of Cersei's children was the spark of the War of the Five Kings between Joffrey Baratheon, Robb, Renly Baratheon, Stannis Baratheon and Balon Greyjoy, being posthumously responsible for the involvement of four of the kings in this war."
 		},
 		{
-			"id": 4,
 			"name": "Sandor Clegane",
 			"shortCode": "the-hound",
 			"actor": "Rory McCann",
@@ -67,7 +62,6 @@
 			"bio": "Sandor Clegane is a skilled warrior in the service of House Lannister, known primarily for the horrible facial scarring he bears on the right side of his face and for his fierce demeanor and lack of chivalry. Sandor is the younger brother of Ser Gregor Clegane, nicknamed \"the Mountain\", a monstrously huge knight and arguably the most feared man in Westeros. In his youth, Gregor nearly burned off half of Sandor's face because he found Sandor playing with a toy that Gregor had discarded. Sandor didn't even \"steal\" it, he was merely playing with it and assumed he didn't need Gregor's permission. Without warning or uttering a word, however, Gregor grabbed Sandor and \"punished\" him by holding his head into a burning brazier. Gregor was only forced to stop after half a dozen servants managed to pry him away from his brother. The incident left severe burn scars over the right half of Sandor's face, thus he usually wears his hair long on that side to cover them. Ever since, Sandor has been deeply afraid of fire."
 		},
 		{
-			"id": 5,
 			"name": "Daenerys Targerim",
 			"shortCode": "daenerys",
 			"actor": "Emilia Clarke",
@@ -81,7 +75,6 @@
 			"bio": "Daenerys is the only daughter and youngest child of King Aerys II Targaryen, the \"Mad King\", and his sister-wife, Rhaella. Her father died during the Sack of King's Landing, before she was even born. The usurper Robert Baratheon installed himself as king, having defeated Aerys in the conquest known as Robert's Rebellion. Her pregnant mother and brother Viserys, fled to the island of Dragonstone, the ancestral home of House Targaryen, to escape Robert. Daenerys's brother Rhaegar Targaryen was killed in the war by Robert. The forces of House Lannister murdered Rhaegar's wife, Elia Martell, and their children, Rhaenys and Aegon, during the Sack of King's Landing."
 		},
 		{
-			"id": 6,
 			"name": "King Joffrey Baratheon",
 			"shortCode": "joffrey",
 			"actor": "Jack Gleeson",

@@ -20,6 +20,8 @@ Handlebars.registerHelper("formatPhoneNumber", function (property) {
 	}
 });
 
+
+
 Handlebars.registerHelper("makeBold", function (options) {
 	return new Handlebars.SafeString("<strong>" + options.fn(this) + "</strong>");
 });
@@ -37,6 +39,14 @@ $(function () {
 	var characterId = getParameterByName("id");
 
 	var promise = fetch('./data/cast.json');
+	var characterPartialsPromise = fetch('./character-details-partials.html');
+
+	characterPartialsPromise.then(function (value) {
+		return value.text();
+	}).then(function (value) {
+		$('body').append(value);
+		Handlebars.registerPartial("characterDetailsPartial", $("#character-details-partial").html());
+	});
 
 	promise.then(function (value) {
 		return value.json();
@@ -48,8 +58,5 @@ $(function () {
 		}
 	});
 
-	/*$('.character-list-container').on('click', '.button--details', function (e) {
-		e.preventDefault();
-		console.log('123');
-	});*/
+
 });

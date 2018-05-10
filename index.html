@@ -22,20 +22,8 @@
 				<div class="character-image-wrap">
 					<img src="images/{{shortCode}}.jpg" alt="{{shortCode}}">
 				</div>
-				<div class="character__data">
-					<h2>{{name}}</h2>
-					{{formatName name house.seat}}
-					<p>{{formatPhoneNumber house.phone}}</p>
-					<p>Actor: {{actor}}</p>
-					{{#with house}}
-						{{#if name}}<p>House:  {{#makeBold}}{{name}}{{/makeBold}}</p>{{/if}}
-						{{#if seat}}<p>Seat: {{seat}}</p>{{/if}}
-						{{#if words}}<p>Words: {{words}}</p>{{/if}}
-					{{/with}}
-					{{#if location}}<p>Whereabouts:{{#toLower}}{{location}}{{/toLower}}</p>{{/if}}
-					{{#unless location}}<p>Whereabouts are unknown...</p>{{/unless}}
-				</div>
-				<a href="cast-details.html?id={{id}}" class="button button--details">View details &#8674;</a>
+				{{> characterDetailsPartial}}
+				<a href="cast-details.html?id={{@index}}" class="button button--details">View details &#8674;</a>
 			</li>
 			{{/each}}
 

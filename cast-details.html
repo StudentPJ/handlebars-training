@@ -1,27 +1,39 @@
 <!doctype html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Handlebars training - 01</title>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Handlebars training - 01</title>
 
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
 
-</head>
-<body class="page-cast-details">
+	</head>
+	<body class="page-cast-details">
 
-<h1 class="main-headline">Games of thrones | Cast Details</h1>
-<section class="character-list-container"></section>
+		<h1 class="main-headline">Games of thrones | Cast Details</h1>
+		<section class="character-list-container"></section>
 
-<script id="character-template" type="text/x-handlebars-template">
+		<script id="character-template" type="text/x-handlebars-template">
 
-	<div class="character">
-		<div class="character-image-wrap">
-			<img src="images/{{shortCode}}.jpg" alt="{{shortCode}}">
-		</div>
-		<div class="character-info">
+			<div class="character">
+				<div class="character-image-wrap">
+					<img src="images/{{shortCode}}.jpg" alt="{{shortCode}}">
+				</div>
+				<div class="character-info">
+					{{> characterDetailsPartial}}
+					<div class="character-bio-container">
+						<p><strong>Bio:</strong>{{bio}}</p>
+					</div>
+					<a href="/" class="button button--details">Back</a>
+				</div>
+
+			</div>
+
+		</script>
+
+		<script id="character-details-partial" type="text/x-handlebars-template">
 			<div class="character__data">
 				<h2>{{name}}</h2>
 				{{formatName name house.seat}}
@@ -35,18 +47,10 @@
 				{{#if location}}<p>Whereabouts:{{#toLower}}{{location}}{{/toLower}}</p>{{/if}}
 				{{#unless location}}<p>Whereabouts are unknown...</p>{{/unless}}
 			</div>
-			<div class="character-bio-container">
-				<p><strong>Bio:</strong>{{bio}}</p>
-			</div>
-			<a href="/" class="button button--details">Back</a>
-		</div>
+		</script>
 
-	</div>
-
-</script>
-
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/handlebars-v4.0.11.js"></script>
-<script src="js/script.js"></script>
-</body>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/handlebars-v4.0.11.js"></script>
+		<script src="js/script.js"></script>
+	</body>
 </html>

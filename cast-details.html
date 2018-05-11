@@ -33,22 +33,7 @@
 
 		</script>
 
-		<script id="character-details-partial" type="text/x-handlebars-template">
-			<div class="character__data">
-				<h2>{{name}}</h2>
-				{{formatName name house.seat}}
-				<p>{{formatPhoneNumber house.phone}}</p>
-				<p>Actor: {{actor}}</p>
-				{{#with house}}
-					{{#if name}}<p>House:  {{#makeBold}}{{name}}{{/makeBold}}</p>{{/if}}
-					{{#if seat}}<p>Seat: {{seat}}</p>{{/if}}
-					{{#if words}}<p>Words: {{words}}</p>{{/if}}
-				{{/with}}
-				{{#if location}}<p>Whereabouts:{{#toLower}}{{location}}{{/toLower}}</p>{{/if}}
-				{{#unless location}}<p>Whereabouts are unknown...</p>{{/unless}}
-			</div>
-		</script>
-
+		<script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/handlebars-v4.0.11.js"></script>
 		<script src="js/script.js"></script>

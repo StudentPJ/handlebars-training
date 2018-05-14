@@ -1,12 +1,3 @@
-// Initialize Firebase
-var config = {
-	apiKey: "AIzaSyCvHj125pwcBQ7JGF93I4SHuJvY4zn6VHk",
-	authDomain: "handlebars-course-5729e.firebaseapp.com",
-	databaseURL: "https://handlebars-course-5729e.firebaseio.com",
-	projectId: "handlebars-course-5729e",
-	storageBucket: "",
-	messagingSenderId: "987890511942"
-};
 firebase.initializeApp(config);
 
 // get query string parameter

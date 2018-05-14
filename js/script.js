@@ -46,8 +46,7 @@ $(function () {
 		return value.text();
 	}).then(function (value) {
 		$('body').append(value);
-	}).then(function () {
-		Handlebars.registerPartial("characterDetailsPartial", $("#character-details-partial").html());
+		Handlebars.registerPartial("characterDetailsPartial", $("#" + $(value).attr('id')).html());
 	});
 
 	var dbRef = firebase.database().ref();
